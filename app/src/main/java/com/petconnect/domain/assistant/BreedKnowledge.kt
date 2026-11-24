@@ -1,0 +1,71 @@
+package com.petconnect.domain.assistant
+
+import com.petconnect.domain.assistant.KnowledgeDomain.CATS
+import com.petconnect.domain.assistant.KnowledgeDomain.DOGS
+
+private fun e(id: String, domain: KnowledgeDomain, triggers: String, answer: String) =
+    KnowledgeEntry(id, domain, triggers.split('|').filter(String::isNotBlank), answer)
+
+internal fun dogs() = listOf(
+    e("d-lab", DOGS, "labrador|labrador retriever|lab dog|yellow lab|black lab",
+        "Labrador Retrievers are friendly, energetic family dogs (25–36 kg) with high exercise needs. Short dense coat; yellow, black, or chocolate. Lifespan ~10–12 years. Often strong matches with other sporting breeds on Pet Connect."),
+    e("d-golden", DOGS, "golden retriever|golden|goldie",
+        "Golden Retrievers are gentle, trainable, and affectionate. Similar size to Labs, love swimming and fetch, need daily exercise and grooming. Watch hips and ears as they age."),
+    e("d-gsd", DOGS, "german shepherd|gsd|alsatian",
+        "German Shepherds are loyal, intelligent, and protective (30–40 kg). High training and exercise needs; heavy shedders. Introduce carefully to other dogs when matching."),
+    e("d-beagle", DOGS, "beagle|beagle dog",
+        "Beagles are curious scent hounds (9–11 kg), pack-oriented and vocal. Need secure fencing and mental stimulation. Generally good with other dogs."),
+    e("d-pug", DOGS, "pug|pug dog",
+        "Pugs are compact companions with flat faces. Low exercise but sensitive to heat and breathing. Great apartment pets — review health notes carefully when matching."),
+    e("d-indie", DOGS, "indie dog|indian street dog|pariah|desi dog|indian mongrel",
+        "Indie (Indian Pariah) dogs are hardy and climate-adapted. Medium size, low grooming, strong immunity when cared for. Common on Pet Connect in Indian cities — temperament varies, so meet after matching."),
+    e("d-pom", DOGS, "pomeranian|pom|fluffy small dog",
+        "Pomeranians are tiny (1.5–3 kg), alert, and fluffy with high grooming needs. Best with careful handling around larger dogs."),
+    e("d-husky", DOGS, "husky|siberian husky",
+        "Huskies need high exercise and cooler climates. Thick double coat, pack-oriented, known escape artists. Not ideal for sedentary homes."),
+    e("d-bulldog", DOGS, "bulldog|english bulldog",
+        "English Bulldogs are calm, heat-sensitive companions with short muzzles. Low stamina; specialised care recommended. Pet Connect connects owners — it is not veterinary advice."),
+    e("d-rottie", DOGS, "rottweiler|rottie",
+        "Rottweilers are powerful guardian dogs needing firm training and socialisation. Best for experienced owners; match with similar-size, well-socialised dogs."),
+    e("d-shih", DOGS, "shih tzu|shihtzu",
+        "Shih Tzus are small companion dogs with long coats needing regular grooming. Affectionate apartment dogs; can be stubborn in training."),
+    e("d-dach", DOGS, "dachshund|sausage dog|wiener dog",
+        "Dachshunds are long-bodied scent hounds. Protect their backs — avoid jumping from heights. Bold personality; handle carefully around larger breeds."),
+    e("d-boxer", DOGS, "boxer dog|boxer",
+        "Boxers are playful, energetic, and loyal. Medium-large with short coats; can be boisterous with smaller dogs — supervise early meetups."),
+    e("d-cocker", DOGS, "cocker spaniel|spaniel",
+        "Cocker Spaniels are affectionate sporting dogs with silky coats needing grooming. Medium size; usually friendly with other dogs when socialised."),
+    e("d-dobie", DOGS, "doberman|dobermann",
+        "Dobermans are athletic and highly trainable. Need experienced handlers and lots of exercise. Structured introductions matter on Pet Connect."),
+    e("d-size", DOGS, "small dog breeds|medium dog breeds|large dog breeds|dog sizes",
+        "Small: Pug, Pomeranian, Shih Tzu, Dachshund. Medium: Beagle, Cocker, Indie. Large: Labrador, Golden, GSD, Husky, Rottweiler, Boxer, Doberman. Size affects safe play when matching."),
+    e("d-energy", DOGS, "which dogs need lots of exercise|high energy dogs|lazy dogs|exercise",
+        "High energy: Husky, GSD, Labrador, Boxer, Doberman. Moderate: Beagle, Indie, Golden, Cocker. Lower: Pug, Bulldog, Shih Tzu, Pomeranian (still need daily walks). Match energy levels for happier pairings."),
+)
+
+internal fun cats() = listOf(
+    e("c-persian", CATS, "persian cat|persian|long hair cat",
+        "Persians are calm, affectionate cats with long coats needing daily grooming. Prefer quiet homes; flat faces may need extra eye care."),
+    e("c-siamese", CATS, "siamese|siamese cat",
+        "Siamese cats are vocal, social, and intelligent with colour-point coats. Need interaction and enrichment; do well with other social cats when introduced carefully."),
+    e("c-maine", CATS, "maine coon|maine coon cat|giant cat",
+        "Maine Coons are large gentle giants with semi-long coats needing brushing. Friendly with families and often other pets."),
+    e("c-bsh", CATS, "british shorthair|british short hair|chubby grey cat",
+        "British Shorthairs are easygoing, sturdy cats with dense coats. Moderate activity — great apartment companions."),
+    e("c-indie", CATS, "indie cat|indian cat|desi cat|street cat|mongrel cat",
+        "Indie (domestic) cats are adaptable and common across India. Varied colours and temperaments; often hardy when vaccinated and well cared for."),
+    e("c-bengal", CATS, "bengal cat|bengal",
+        "Bengals are athletic, high-energy cats with spotted/marbled coats. Need climbing space and play — not ideal for low-stimulation homes."),
+    e("c-ragdoll", CATS, "ragdoll|ragdoll cat",
+        "Ragdolls are large, relaxed, people-oriented cats. Semi-long coat, prefer indoor living and gentle companions."),
+    e("c-sphynx", CATS, "sphynx|hairless cat",
+        "Sphynx cats are hairless and need regular skin care, warmth, and attention. Sensitive to sun and cold."),
+    e("c-fold", CATS, "scottish fold|fold ear cat",
+        "Scottish Folds have folded ears and sweet temperaments. Discuss health openly — cartilage concerns exist in the breed."),
+    e("c-ash", CATS, "american shorthair",
+        "American Shorthairs are sturdy, easygoing cats with low-maintenance coats. Reliable companions for first-time cat owners."),
+    e("c-multi", CATS, "can cats live together|introduce two cats|cat matching|multi-cat",
+        "Slow introductions, separate litter/food/vertical space, and similar energy levels help. Use Pet Connect matches to coordinate careful meetups — do not rush cohabitation."),
+    e("c-indoor", CATS, "indoor cat|outdoor cat|keep cat inside",
+        "Many urban owners keep cats indoors for safety. Enrichment (trees, toys, windows) is essential. Supervise gradual meetups arranged through the app."),
+)

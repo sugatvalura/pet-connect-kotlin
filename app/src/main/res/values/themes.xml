@@ -1,0 +1,11 @@
+<resources>
+    <!-- The XML theme only exists to paint the window before Compose wakes up.
+         Everything real lives in ui/theme/Theme.kt. -->
+    <style name="Theme.PetConnect" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/surface_alt</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <color name="primary">#0E9594</color>
+    <color name="surface_alt">#F4F8F8</color>
+</resources>
