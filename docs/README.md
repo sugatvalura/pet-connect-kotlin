@@ -1,4 +1,4 @@
-# PetConnect — Interview Prep Guide
+# PetConnect 
 
 Read in order. Every concept points to real code in this repo.
 
